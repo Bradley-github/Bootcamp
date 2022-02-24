@@ -5,8 +5,13 @@ CREATE TABLE [Customer] (
 	customer_name varchar(250),
 );
 	INSERT INTO Customer(customer_name)
-	VALUES ('Bradley''James''Jessica''Aaron''Maggie')
-;
+	VALUES 
+	('Bradley'),
+	('James'),
+	('Jessica'),
+	('Aaron'),
+	('Maggie');
+
 DROP TABLE IF EXISTS [OrderHeader];
 
 CREATE TABLE [OrderHeader] (
@@ -50,8 +55,7 @@ CREATE TABLE [Services] (
 	(2, 'Weapon', 5),
 	(3, 'Weapon', 5),
 	(4, 'Weapon', 5),
-	(5, 'Weapon', 5),
-);
+	(5, 'Weapon', 5);
 
 DROP TABLE IF EXISTS [Services_Status];
 
@@ -70,8 +74,13 @@ CREATE TABLE [Supplies] (
 );
 
 	INSERT INTO Supplies(customer_name)
-	VALUES ('Bradley''James''Jessica''Aaron''Maggie'),
-);
+	VALUES 
+	('Bradley'),
+	('James'),
+	('Jessica'),
+	('Aaron'),
+	('Maggie');
+
 DROP TABLE IF EXISTS [Received_Items];
 
 CREATE TABLE [Received_Items] (
@@ -88,8 +97,8 @@ CREATE TABLE [Received_Items] (
 	(2, 2, 5, 1, 20222402),
 	(3, 3, 5, 1, 20222402),
 	(4, 4, 5, 1, 20222402),
-	(5, 5, 5, 1, 20222402),
-;
+	(5, 5, 5, 1, 20222402);
+
 DROP TABLE IF EXISTS [Inventory];
 
 CREATE TABLE [Inventory] (
@@ -104,8 +113,8 @@ CREATE TABLE [Inventory] (
 	(2, 2, 21, 20222402),
 	(3, 3, 15, 20222402),
 	(4, 4, 1, 20222402),
-	(5, 5, 6, 20222402),
-;
+	(5, 5, 6, 20222402);
+
 DROP TABLE IF EXISTS [Tavern];
 
 CREATE TABLE [Tavern] (
@@ -113,5 +122,9 @@ CREATE TABLE [Tavern] (
 	TavernName varchar(250) 
 );
 	INSERT INTO Tavern(TavernName)
-	VALUES ('MilesTap''TheLocal''DiagonAlley''ThreeCastles''LostShepard')
-;
+	VALUES 
+	('MilesTap'),
+	('TheLocal'),
+	('DiagonAlley'),
+	('ThreeCastles'),
+	('LostShepard');
