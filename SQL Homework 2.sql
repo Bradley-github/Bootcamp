@@ -9,6 +9,15 @@ CREATE TABLE [Guests] (
 	StatusId int
 );
 
+
+	INSERT INTO Guests(Name,Notes,Birthdate,Cakeday,StatusId)
+	VALUES ('Mage', 'Level3' ,20000101, 20000102, 1),
+	('Warrior', 'Level100', 20000202, 20000303, 2),
+	('DeathKnight','Level19',20000101, 20000102, 3),
+	('Warlock', 'Level1', 20000101, 20000102, 4),
+	('Rogue', 'Level22', 20000101, 20000102, 5),
+;
+
 DROP TABLE IF EXISTS [Status];
 
 CREATE TABLE [Status] (
@@ -19,10 +28,17 @@ DROP TABLE IF EXISTS [Levels];
 
 CREATE TABLE [Levels] (
 	Id int IDENTITY PRIMARY KEY,
-	GuestID Int,
+	GuestId Int,
 	ClassId Int,
 	Date date,
 );
+
+	INSERT INTO Levels(GuestId,ClassId,Date)
+	VALUES (1, 1, 20222802),
+	(1, 1, 20222802),
+	(3, 3, 20222802),
+	(4, 4, 20222802),
+;
 
 DROP TABLE IF EXISTS [Classes];
 
