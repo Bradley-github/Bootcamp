@@ -45,7 +45,8 @@ CREATE TABLE [Levels] (
 	VALUES (1, 1, 19),
 	(1, 1, 4),
 	(3, 3, 3),
-	(4, 4, 15)
+	(4, 4, 15),
+	(5, 5, 20)
 ;
 
 DROP TABLE IF EXISTS [Classes];
@@ -116,6 +117,13 @@ CREATE TABLE [Roles] (
 	Name varchar(50),
 	Description varchar(max),
 );
+
+	INSERT INTO Location(Name)
+	VALUES ('DownUnder'),
+	('Up Top'),
+	('Far East'),
+	('Way West')
+;
 
 DROP TABLE IF EXISTS [SupplySales];
 
@@ -205,7 +213,7 @@ CREATE TABLE [Stays] (
 	SaleId int,
 	GuestId int,
 	RoomId int,
-	Date date
+	Date date,
 
 );
 
@@ -220,3 +228,35 @@ FOREIGN KEY (LocationId) REFERENCES Location(LocationId);
 ALTER TABLE dbo.Guests
 ADD CONSTRAINT FK_GuestId
 FOREIGN KEY (GuestId) REFERENCES Levels(GuestId);
+
+
+SELECT* FROM Guests
+
+SELECT NULLIF(Birthdate, 2000) as nullish FROM Guests
+
+SELECT* FROM Stays
+
+SELECT NULLIF(Rate, 100) as nullish FROM Stays
+
+SELECT DISTINCT Name
+FROM Guests
+
+
+Select * FROM Guests order by Name desc
+/* [Group By] [Order By] */
+
+
+SELECT* FROM Stays
+
+SELECT NULLIF(Rate, 100) as nullish FROM Stays
+
+SELECT 
+    Id
+FROM
+    dba_tables;
+
+SELECT* FROM Levels
+
+SELECT NULLIF(Levels, Id, levels,)
+
+RETURN ['Label Grouping']
